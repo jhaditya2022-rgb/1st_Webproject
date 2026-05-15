@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Cancer Detection - Analysis</title>
+    <link rel="stylesheet" href="2nd-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="upload-container">
+        <h1 class="flash-title">Find Out The Skin Cancer</h1>
+        
+        <p id="instruction-text" class="instruction">Please Upload The Clear Image</p>
+
+        <div class="input-group" id="input-section">
+            <label for="file-upload" class="custom-file-upload">
+                Choose File
+            </label>
+            <input id="file-upload" type="file" accept="image/*"/>
+            
+            <div class="icon-circle">
+                <img src="https://cdn-icons-png.flaticon.com/512/3342/3342137.png" alt="icon">
+            </div>
+        </div>
+
+        <div id="preview-wrapper" style="display: none;">
+            <div class="image-box">
+                <div id="remove-img" class="close-btn">&times;</div>
+                <img id="image-preview" src="" alt="Selected Skin Image">
+            </div>
+        </div>
+
+        <button id="predict-btn" class="predict-button">Predict</button>
+    </div>
+
+    <script src="2nd-script.js"></script>
+</body>
+</html>

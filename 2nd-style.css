@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2294E3;
+    background: radial-gradient(circle at 70% 50%, #52E19F 0%, #2294E3 45%, #2B75FF 100%);
+    overflow: hidden;
+}
+
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    width: 90%;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    cursor: default;
+}
+
+/* Flashing effect for Title on hover */
+@keyframes titleFlash {
+    0% { opacity: 1; color: #000; }
+    50% { opacity: 0.6; color: #1d7af3; }
+    100% { opacity: 1; color: #000; }
+}
+
+.flash-title:hover {
+    animation: titleFlash 0.8s infinite;
+}
+
+.instruction {
+    font-size: 1.4rem;
+    color: #000;
+    font-weight: 500;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.custom-file-upload {
+    background-color: #60a5fa;
+    color: #000;
+    padding: 12px 40px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #fff;
+    color: #60a5fa;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Icon Circle with Scale effect */
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.icon-circle:hover {
+    transform: scale(1.25);
+}
+
+.icon-circle img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Preview Box */
+.image-box {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#image-preview {
+    max-width: 280px;
+    max-height: 280px;
+    border-radius: 15px;
+    border: 4px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Remove button X */
+.close-btn {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 32px;
+    height: 32px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    background: #ff4d4d;
+    color: white;
+    transform: scale(1.1);
+}
+
+.predict-button {
+    background-color: #000;
+    color: #fff;
+    padding: 14px 70px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.predict-button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
